@@ -14,6 +14,7 @@ var image;
 var title;
 var desc;
 
+
 const basicFetch = async (endpoint) => {
   const req = await fetch(`${BASE_URL}${endpoint}?&${language}&${API_KEY}`)
   const json = await req.json();
@@ -22,7 +23,7 @@ const basicFetch = async (endpoint) => {
   image = `${IMG_URL}${json.poster_path}`;
   title = json.title;
   desc = json.overview;
-
+  
   return [image, title, desc];
 }
 
@@ -31,7 +32,7 @@ function findMovie(num){
 
   if(!data){
 
-    image = url('./Poster.png');
+    image = './Poster.png';
     title = "Ops, hoje não é dia de assistir filme. Bora codar!";
 
     return{image, title};
@@ -41,14 +42,27 @@ function findMovie(num){
     return {image, title, desc};
 
   }
-  console.log(image);
   
 }
 
 function appendMovie(){
   const dados = findMovie(Math.floor(Math.random() * 900 + 1));
+  console.log(dados.image);
+  console.log(dados.title);
+  console.log(dados.desc);
 
-  console.log(dados);
+
+  if(dados.desc){
+    INSERT_IMG.src = image;
+    INSERT_TITLE.innerHTML = title;
+    INSERT_DESC.innerHTML=desc;
+    
+  } else {
+    INSERT_IMG.src = image;
+    INSERT_TITLE.innerHTML = title;
+  }
+
+
 }
 
 ENCONTRAR_FILME.addEventListener("click", function(){

@@ -11,9 +11,12 @@
 }
 
 body{
-    height: 100vh;
+    height: 100%;
     background: var(--background);
     font-family: 'Poppins', sans-serif;
+    background-repeat: no-repeat;
+    padding: 5em;
+    min-height: 100vh;
 }
 h1{
     color: var(--title);
@@ -33,7 +36,6 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     width: 100%;
 }
 
@@ -73,4 +75,13 @@ p{
 
 #conteudo{
     margin-left: 20px;
+    width: 20em;
+}
+
+#descFilme{
+    text-align: justify;
+    margin:.5em;
+}
+#posterFilme{
+    height: 15em;
 }
