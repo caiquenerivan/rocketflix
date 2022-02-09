@@ -10,7 +10,72 @@
     --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 499px) {
+    
+    body{
+        background: var(--background);
+        font-family: 'Poppins', sans-serif;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        min-height: 100vh;
+    }
+    
+    h1{
+        color: var(--title);
+        text-align: center;
+        margin: 2em;
+    }
+    
+    p{
+        color: var(--subtitle);
+        text-align: center;
+    }
+    
+    .principal{
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .title{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3em;
+    }
+    
+    #filme{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #encontrarFilme{
+        display:flex;
+        padding: 1em;
+        border-radius: 3px;
+        margin: 3em 0;
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5em;
+    }
+    img{
+        width: 8em;
+    }
+    
+    #encontrarFilme img{
+        width: 2em;
+        margin-right: 1em;
+    }
+}
+
+
+@media screen and (min-width: 500px) {
 
     body{
         background: var(--background);
@@ -20,12 +85,12 @@
         min-height: 100vh;
     }
 
-
     .content{
         display: flex;
         flex-direction:column;
         text-align: center;
         align-items: center;
+        padding: 0;
     }
 
     p{
@@ -72,9 +137,6 @@
         align-items: center;
     }
 
-    #posterFilme{
-        height: 300px;
-    }
 }
 
 @media screen and (min-width: 801px) {
@@ -138,6 +200,7 @@
 
     #filme{
         display: flex;
+        flex-direction: row;
         margin: 2em 0;
         align-items: center;
     }

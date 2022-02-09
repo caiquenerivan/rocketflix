@@ -34,8 +34,9 @@ function findMovie(num){
 
     image = './Poster.png';
     title = "Ops, hoje não é dia de assistir filme. Bora codar!";
+    desc = false;
 
-    return{image, title};
+    return{image, title, desc};
 
   } else {
 
@@ -61,6 +62,9 @@ function appendMovie(){
     INSERT_IMG.src = image;
     INSERT_TITLE.innerHTML = title;
   }
+
+  desc = false;
+
 
 
 }
